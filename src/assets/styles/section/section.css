@@ -1,0 +1,175 @@
+@import url("../root.css");
+
+/* Mobile First : Taille d'écran 375px ( Iphone 6) */
+
+/* Alignement central et espacement des sections et des articles */
+.section-one,
+.s2-article2,
+.s2-article3,
+.s2-article4 {
+  text-align: center;
+  padding: 1em 2.5em;
+}
+
+/* Style des contenus textuels */
+.section-one p,
+.section-two p,
+.section-two ul li {
+  font-size: var(--sizeP);
+  font-family: var(--font);
+}
+
+.section-one {
+  margin-bottom: 6em;
+}
+
+.img-ads {
+  display: none;
+}
+
+/* Style des contenus textuels */
+.kyloren {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Style du titre de la section deux */
+.section-two h3 {
+  font-size: 1.7em;
+  width: 10em;
+  line-height: 0.8em;
+  margin: 0 auto;
+}
+
+/* Réinitialisation des styles pour la liste de la section deux */
+.section-two ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.section-two ul li {
+  margin-bottom: 1em;
+}
+
+/* Ajout d'un élément avant le texte de la liste */
+.section-two ul li:before {
+  content: "- ";
+}
+
+.s2-article3 p span,
+.s2-article4 ul li span {
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Style de l'image du robot avant le texte de la section deux */
+.image-robot {
+  display: flex;
+  justify-content: center;
+}
+
+.robot {
+  height: 15em;
+  margin: 0 auto;
+  padding-top: 4em;
+  padding-bottom: 1em;
+}
+
+/*  */
+.white-bg {
+  width: 0.3em;
+  height: 15em;
+  background-color: var(--whiteColor);
+  position: absolute;
+  margin-left: 15.8em;
+  margin-top: 4em;
+}
+
+/* Version Desktop : Taille d'écran 1024px */
+@media screen and (min-width: 1024px) {
+  /* Affichage de la section "ads" */
+  .s1-ads,
+  .img-ads,
+  .section-one {
+    display: flex;
+  }
+
+  /* Centrage de la section une */
+  .section-one {
+    justify-content: center;
+    padding: 3em 0 8em 0;
+  }
+
+  /* Styles de base de l'article 1 */
+  .s1-article {
+    text-align: left;
+    margin-right: 2em;
+    width: 20em;
+  }
+
+  /* Comportement de défilement de la section "ads" */
+  .s1-ads {
+    width: 15em;
+    height: 30em;
+    position: relative;
+  }
+
+  .img-ads {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .s1-ads.fixed {
+    position: fixed;
+    top: 3em;
+    right: calc((100% - 50em) / 2);
+    z-index: 999;
+  }
+
+  /* Intégration du style pour la section 2 */
+  .kyloren {
+    height: 70vh;
+  }
+
+  .section-two h3 {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .robot {
+    padding: 0;
+  }
+
+  .white-bg {
+    display: none;
+  }
+
+  /* Positionnement de l'image à côté du texte */
+  .s2-article3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    width: 60em;
+    margin: 0 auto;
+  }
+
+  .s2-article3 img {
+    height: 18em;
+    margin-left: 10em;
+  }
+
+  .s2-article3 p {
+    text-align: left;
+    margin-right: 7em;
+  }
+
+  .s2-article4 {
+    text-align: left;
+    width: 42em;
+    margin: 0 auto;
+  }
+}

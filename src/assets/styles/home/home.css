@@ -1,0 +1,125 @@
+@import url("../root.css");
+
+/* Mobile First : Taille d'écran 375px ( Iphone 6) */
+
+/* Réinitialisation des styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: var(--font);
+  color: var(--blackColor);
+  background-color: var(--bgColor);
+}
+
+/* L'effet de parallaxe */
+.parallax-bg {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  background-image: url("../../images/header-bg-2x.png");
+  background-color: black;
+  margin: 0;
+  color: var(--whiteColor);
+}
+
+/* Style de la section logo du header */
+.h-section {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  width: 22em;
+  margin: 5em;
+}
+
+/* Positionnement des icônes close - menu du burger*/
+.h-menu,
+.h-close {
+  position: absolute;
+  margin: 0.8em;
+}
+
+.h-menu {
+  right: 0;
+}
+
+/* Style du bouton burger pour afficher le menu */
+.navbar_burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.navbar_first {
+  height: 100vh;
+}
+
+/* Style du menu principal */
+nav ul {
+  display: block;
+  text-align: center;
+  list-style: none;
+  margin: 0 auto;
+  padding-top: 5em;
+}
+
+.navbar_link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: var(--sizeT);
+  font-weight: bold;
+  line-height: 2em;
+}
+
+/* Version Desktop : Taille d'écran 1024px */
+
+@media screen and (min-width: 1024px) {
+  /* Suppression du bouton burger */
+  .navbar_burger {
+    display: none;
+  }
+
+  /* Fixer la barre de navigation */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+  }
+
+  /* Style du menu de navigation */
+  nav ul {
+    display: inline-block;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Centrer les liens de la nav */
+  nav ul li {
+    display: inline-block;
+    padding: 1em;
+    font-size: 0.6em;
+  }
+
+  /* Augmenter la taille du logo pour s'adapter à la version desktop */
+  .logo {
+    width: 45em;
+    margin: 0;
+    padding-top: 5em;
+  }
+}

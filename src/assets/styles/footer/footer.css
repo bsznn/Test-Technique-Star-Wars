@@ -1,0 +1,114 @@
+@import url("../root.css");
+
+/* Mobile First : Taille d'écran 375px ( Iphone 6) */
+
+/* Réinitialisation des marges et choix de la police pour le pied de page */
+footer {
+  margin: 0;
+  font-family: var(--font);
+}
+
+/* Styles pour l'image avec les robots au-dessus du pied de page */
+.storm {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  top: 0.4em;
+}
+
+/* Masquage du texte avec les droits d'auteurs*/
+.f-section2 {
+  display: none;
+}
+
+/* Section contenant les liens et les icônes du pied de page avec un fond d'image */
+.section-desktop {
+  background-image: url("../../images/darthvader_2x.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style pour le premier article avec des liens */
+.f-section-article1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
+}
+
+/* Styles pour les listes de liens */
+.f-section-list1,
+.f-section-list2 {
+  list-style: none;
+}
+
+.f-section-list1 li,
+.f-section-list2 li {
+  font-size: var(--sizeP);
+}
+
+/* Styles pour les liens du pied de page */
+.footer_link {
+  text-decoration: none;
+  color: var(--bgColor);
+  font-size: var(--sizeP);
+  line-height: 2.5em;
+}
+
+/* Styles pour le deuxième article avec les icônes des réseaux sociaux */
+.f-section-article2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5em;
+}
+
+/* Styles pour les paragraphes du deuxième article */
+.f-section-article2 p {
+  margin-right: 5em;
+  text-transform: uppercase;
+  font-size: var(--sizeF);
+  color: var(--bgColor);
+}
+
+/* Ajout d'espacement avant les icônes */
+.f-section-article2 span img {
+  margin-right: 1em;
+}
+
+/* Version Desktop : Taille d'écran 1024px */
+@media screen and (min-width: 1024px) {
+  .section-desktop {
+    height: 50vh;
+    background-position: top;
+  }
+
+  /* Affichage du texte contenant les droits d'auteurs */
+  .f-section2 {
+    display: flex;
+    justify-content: center;
+    color: var(--bgColor);
+    font-size: var(--sizeP);
+    padding-top: 5em;
+  }
+
+  /* Alignement en ligne des liens et des icônes du pied de page */
+  .f-section3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .f-section-list1,
+  .f-section-list2 {
+    margin-right: 6em;
+  }
+
+  .f-section-article2 {
+    display: inline-block;
+    padding-top: 2em;
+  }
+}
